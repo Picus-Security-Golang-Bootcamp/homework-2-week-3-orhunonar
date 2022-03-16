@@ -102,9 +102,10 @@ func main() {
 					fmt.Println(err)
 
 				} else if listofbooks[i].Stock > quantitiy {
-					quantityofbook := listofbooks[i].Stock
-					newquantityofbook := quantityofbook - quantitiy
-					fmt.Println("New quantity of ", listofbooks[i].Bookname, " is ", newquantityofbook)
+
+					listofbooks[i].Stock -= quantitiy
+					fmt.Println("New quantity of ", listofbooks[i].Bookname, " is ", listofbooks[i].Stock)
+					fmt.Println(listofbooks[i])
 					break
 				} else {
 					fmt.Println("Insufficent Number of Books")

@@ -1,25 +1,22 @@
 ## Homework | Week 3
-`Not: Ödevi yeni bir repoya ekleyeceksiniz. Var olan reponuzda bir güncelleme olmayacak. "homework-2..." şeklinde yeni bir repo üzerinde çalışacaksınız.`
 
-
-Elimizde bir kitap listesi var. 
-Kitap alanları şöyle;
+The Struct of this project has
 ```
-- Kitap ID
-- Kitap Adı
-- Sayfa Sayısı
-- Stok Sayısı
-- Fiyatı
-- Stock Kodu
+- Book ID
+- Book Name
+- Page Number
+- Amount Book on the Stock
+- Price
+- Stock Code
 - ISBN
-- Yazar bilgisi (ID ve İsim)
+- Information about the Author (ID and Name)
 ```
 
-1. Tüm kitapları listele (list)
-2. Verilen girdi hangi kitap isimlerinde geçiyorsa o kitapları listele (search)
-3. ID'ye göre kitabı yazdır
-4. IDsi verilen kitabı sil. (Silinen kitabın ID'ye göre geliyor olması gerekiyor.)
-5. IDsi verilen kitabı istenilen adet kadar satın al ve kitabın son bilgilerini ekrana yazdır.
+1. List Command : List the book
+2. Search: Search the Book
+3. Get : Get the information of book that has this ID
+4. Delete: Delete the book that has this ID
+5. Buy : Buy from the book with the specified id as much as the number written
 
 Yanlış komut girildiğinde ekrana usage'ı yazdıracak. 
 
@@ -55,9 +52,3 @@ go run main.go buy <bookID> <quantity>
 go run main.go buy 5 2
 ```
 
-###
-# Requirements:
-- README
-- No third party package(s)
-- Everything should be in English (Comments, Function names, File names, etc.)
-- Use structs not maps
