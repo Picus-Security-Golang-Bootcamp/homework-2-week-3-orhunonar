@@ -45,7 +45,6 @@ func main() {
 				ID:   "34563",
 				Name: "J. R. R. Tolkien",
 			}},
-		// {"Nutuk"}, {"Olasılıksız"}, {"Silmarillion"}
 	}
 
 	if args[0] == "list" {
