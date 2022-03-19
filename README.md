@@ -18,7 +18,7 @@ The Struct of this project has
 4. Delete: Delete the book that has this ID
 5. Buy : Buy from the book with the specified id as much as the number written
 
-Concurrency ile ilgili medium yazısı yazılacak. 
+
 
 ### list command
 ```

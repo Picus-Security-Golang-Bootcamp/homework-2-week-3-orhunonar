@@ -8,9 +8,9 @@ import (
 
 func main() {
 
-	args := os.Args[1:]
+	args := os.Args[1:] //Read the commands on the terminal line
 
-	listofbooks := []books{{
+	listofbooks := []books{{ // List of the Books
 		Bookid:    "1",
 		Bookname:  "Nutuk",
 		Page:      "154",
@@ -47,14 +47,14 @@ func main() {
 			}},
 	}
 
-	if args[0] == "list" {
+	if args[0] == "list" { //Check if command is list
 
 		for i := 0; i < len(listofbooks); i++ {
 			fmt.Println(listofbooks[i].Bookname)
 		}
-	} else if args[0] == "search" {
+	} else if args[0] == "search" { //Check if command is search
 		for i := 0; i < len(listofbooks); i++ {
-			if args[1] == listofbooks[i].Bookname {
+			if args[1] == listofbooks[i].Bookname { //Print the name of the books
 				fmt.Println(listofbooks[i])
 				break
 
@@ -66,7 +66,7 @@ func main() {
 			}
 		}
 
-	} else if args[0] == "get" {
+	} else if args[0] == "get" { // //Check if command is get
 		for i := 0; i < len(listofbooks); i++ {
 			if args[1] == listofbooks[i].Bookid {
 				fmt.Println(listofbooks[i])
@@ -79,7 +79,7 @@ func main() {
 
 			}
 		}
-	} else if args[0] == "delete" {
+	} else if args[0] == "delete" { //Check if command is delete
 		for i := 0; i < len(listofbooks); i++ {
 			if args[1] == listofbooks[i].Bookid {
 				listofbooks = remove(listofbooks, i)
@@ -93,7 +93,7 @@ func main() {
 			}
 		}
 
-	} else if args[0] == "buy" {
+	} else if args[0] == "buy" { //Check if command is buy
 		for i := 0; i < len(listofbooks); i++ {
 			if args[1] == listofbooks[i].Bookid {
 				quantitiy, err := strconv.Atoi(args[2])
@@ -120,7 +120,7 @@ func main() {
 
 		}
 
-	} else {
+	} else { //If commands are not valid. Show the usage of the program.
 		fmt.Println("\n" + "Invalid command\n" + "Usage:\n" + "list: list the books in the list\n" +
 			"search <bookName>: search the name of the book if it is in the list\n" + "get <bookID>: get the details of the book that have this ID\n" +
 			"delete <bookID>: delete the book that have this ID\n" + "buy <bookID> <quantity>: buy from the book with the specified id as much as the number written ")
