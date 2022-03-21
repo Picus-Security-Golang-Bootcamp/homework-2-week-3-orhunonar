@@ -48,4 +48,4 @@ go run main.go delete 5
 go run main.go buy <bookID> <quantity>
 go run main.go buy 5 2
 ```
-
+Concurrency => https://medium.com/@orhunonar/what-is-concurrency-94351c45dd00
